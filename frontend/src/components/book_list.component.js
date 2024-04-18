@@ -33,7 +33,7 @@ const Book = (props) => (
 export default function BooksList() {
   const [books, setBookList] = useState([]);
   useEffect(() => {
-    const url = "https://full-stack-p.vercel.app";
+    const url = "https://full-stack-p.vercel.app/";
     console.log("url : ", url);
     axios
       //.get(url)
@@ -48,7 +48,7 @@ export default function BooksList() {
   }, []);
 
   const deleteBook = (id) => {
-    const url = "https://full-stack-p.vercel.app";
+    const url = "https://full-stack-p.vercel.app/";
     axios.delete(url + "/" + id).then((response) => {
       //console.log(response.data);
       setBookList(books.filter((el) => el._id !== id));
