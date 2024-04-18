@@ -11,7 +11,7 @@ export default function CreateBook() {
     e.preventDefault();
 
     let book = {title: title , author: author, description: description};
-    const url = "http://localhost:5000/api";
+    const url = "https://full-stack-p.vercel.app/api";
     axios
       .post(url, book)
       .then((res) => {
